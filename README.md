@@ -111,3 +111,102 @@ fn main(){
 
     println!("{:?}", combinado); // deve imprimir [1,2,3,4,5,6]
 }
+
+teste 02
+
+//struct Pessoa {
+ //    nome: String,
+   //   idade:u32,
+     // altura:f32,
+//}
+
+//fn main(){ 
+   
+ // let pessoa = Pessoa {
+  //  nome: String::from("kaiky"),
+   // idade: 28,
+   // altura: 1.65,
+   // };
+
+//println!("nome:{},idade:{}, altura:{}", pessoa.nome, pessoa.idade, pessoa.altura);
+     
+ //}
+
+
+
+fn main(){
+    let pessoa = ("Ana",28,1.65,true);
+
+
+    let nome = pessoa.0;
+    let idade = pessoa.1;
+    let altura = pessoa.2;
+    let ativo = pessoa.3;
+   
+    println!("Nome: {},idade:{},altura:{},ativo:{}", nome, idade, altura, ativo);
+  
+}
+
+//fn main(){
+  //  let x = 10;
+   // let y= &x;
+   // println!("{}",y);
+//}
+
+//fn main(){
+   // let mut x = 10;
+    //let y = &mut x;
+   // *y +=1;
+  //  println!("{}", y);
+//}
+
+
+fn main(){
+    // criando uma pilha usando Vec
+    let mut pilha: Vec<&str>=Vec::new();
+
+    // adicionando elementos à pilha (empilhando) 
+    pilha.push("joão");
+    pilha.push("maria");
+    pilha.push("carlos");
+
+    //exibindo a pilha
+    println!("Pilha inicial:{:?}", pilha);
+    
+}
+
+
+fn main(){
+    // criando uma pilha usando Vec
+    
+    let mut pilha: Vec<&str>=Vec::new();
+
+    // adicionando elementos à pilha (empilhando) 
+    
+    pilha.push("joão");
+    pilha.push("maria");
+    pilha.push("carlos");
+
+    //exibindo a pilha
+    
+    println!("Pilha inicial:{:?}", pilha);
+
+    //removendo elementos da pilha(desempilhamento)
+
+    let topo = pilha.pop();
+        println!("topo da pilha:{:?}",topo);
+    println!("pilha apos remoçao:{:?}", pilha);
+
+    // adicionando mais elementos
+    pilha.push("Ana");
+    pilha.push("lucas");
+    println!("Pilha após adição:{:?}",pilha);
+    //exibindo a pilha após mais inserções
+    
+    println!("pilha final:{:?}", pilha);
+    // removendo mais um elementos
+    let topo_2 = pilha.pop();
+    
+    println!("Novo topo da pilha:{:?}", topo_2);
+    println!("pilha final:{:?}", pilha);
+}
